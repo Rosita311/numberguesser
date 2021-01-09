@@ -9,7 +9,9 @@ function generateTarget() {
 };
 
 function compareGuesses(human, computer, number) {
-  if((number-human) <= (number-computer)) {
+   let humanDistance = Math.abs(human - number);
+   let computerDistance = Math.abs(computer - number);
+  if(humanDistance <= computerDistance) {
        return true;
       } else {
        return false;
@@ -19,7 +21,7 @@ function compareGuesses(human, computer, number) {
 function updateScore(winner) {
    if(winner === 'human') {
       humanScore++;
-   } else if(winner = 'computer')
+   } else if(winner === 'computer')
       computerScore++;
    };
 
