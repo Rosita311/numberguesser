@@ -8,15 +8,26 @@ function generateTarget() {
    return Math.floor(Math.random() * 10) 
 };
 
-console.log(generateTarget());
-
 function compareGuesses(human, computer, number) {
-
   if((number-human) <= (number-computer)) {
        return true;
       } else {
        return false;
-  } };
+  } 
+};
 
-console.log(compareGuesses());
+function updateScore(winner) {
+   if(winner === 'human') {
+      humanScore++;
+   } else if(winner = 'computer')
+      computerScore++;
+   };
 
+function advanceRound() {
+   currentRoundNumber++;
+};
+
+generateTarget();
+compareGuesses();
+updateScore();
+advanceRound();
