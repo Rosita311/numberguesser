@@ -32,4 +32,4 @@ function advanceRound() {
 generateTarget();
 compareGuesses();
 updateScore();
-advanceRound();
+
